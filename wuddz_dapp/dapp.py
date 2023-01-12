@@ -736,10 +736,9 @@ class Wuddz_Dapp:
                 etht=input("\033[0m\nInput Choice=> ") or 'z'
                 if etht=='e':break
                 elif etht in 'l,s':self.config_main(etht)
-                elif etht=='n':self.nw,self.node_url=self.block_network()
+                elif etht in 'd,p':self.sub_main(etht)
+		elif etht=='n':self.nw,self.node_url=self.block_network()
                 elif etht=='x':dapp_trade.Exchange_Trade().sub_main()
-                elif etht=='d':self.sub_main(etht)
-                elif etht=='p':self.sub_main(etht)
                 elif etht=='1':self.account_create()
                 elif etht in '2,3,4,5,6,7,8,9':
                     if not self.node_url:self.nw,self.node_url=self.block_network()
